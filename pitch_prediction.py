@@ -32,7 +32,7 @@ def main():
     target = ['pitch_type']
     features = ['stand', 'p_throws', 'balls', 'strikes', 'on_3b', 'on_2b', 'on_1b', 'outs_when_up', 'pitch_number']
 
-    # Subset the dataframe into a target dataset and input dataset
+    # Subset the dataframe into a target data set and input data set
     y = data[target]
     x = data[features]
 
@@ -50,7 +50,7 @@ def main():
     # Fit transformer to data
     transformed = transformer.fit_transform(x)
 
-    # Reconstruct the input dataset using the transformed data and column names
+    # Reconstruct the input data set using the transformed data and column names
     x = pd.DataFrame(
         transformed, 
         columns=transformer.get_feature_names_out()
